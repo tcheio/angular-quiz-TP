@@ -15,4 +15,8 @@ export class CarteCategorieComponent {
     ngOnInit(): void {
     this.CategorieService.getCategories();
   }
+
+  getCategoryById(id: number) {
+    return this.CategorieService.getCategoriesById(id);
+  }
 }

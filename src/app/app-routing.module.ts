@@ -29,7 +29,7 @@ const routes: Routes = [
     component: RegisterComponent
   },
   {
-    path: 'categories',
+    path: 'categories/:playerName',
     component: CategorieComponent
   }
 ];

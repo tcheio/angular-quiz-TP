@@ -16,4 +16,8 @@ export class CategorieService {
         }
       }
     )};
+
+    getCategoriesById(id: number) {
+      return this.categories.find(category => category.id === id);
+    }
   }
