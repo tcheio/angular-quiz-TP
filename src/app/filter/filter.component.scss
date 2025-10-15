@@ -1,0 +1,8 @@
+.filter-container {
+  @apply flex flex-row items-center justify-center;
+}
+
+.filter-input {
+  @apply border border-violet-500 px-4 py-2 rounded mr-2;
+  @apply flex flex-row items-center justify-center;
+}

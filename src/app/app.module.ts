@@ -1,11 +1,11 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { AppRoutingModule } from "./app-routing.module";
+import { AppComponent } from "./app.component";
+import { HomeComponent } from "./home/home.component";
+import { HeaderComponent } from "./header/header.component";
+import { FooterComponent } from "./footer/footer.component";
 import { QuizComponent } from "./quiz/quiz.component";
 import { provideHttpClient } from "@angular/common/http";
 import { ResultComponent } from './quiz/result/result.component';
@@ -16,6 +16,7 @@ import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
 import { CategorieComponent } from './categorie/categorie.component';
 import { CarteCategorieComponent } from './carte-categorie/carte-categorie.component';
+import { FilterComponent } from "./filter/filter.component";
 
 @NgModule({
   declarations: [
@@ -37,8 +38,10 @@ import { CarteCategorieComponent } from './carte-categorie/carte-categorie.compo
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule
+    FilterComponent,
   ],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
   providers: [provideHttpClient()],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}
