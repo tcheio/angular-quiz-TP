@@ -15,8 +15,9 @@ export class QuestionComponent implements OnInit {
     private quizService: QuizService,
     private route: ActivatedRoute,
   ) {
-    this.route.params.subscribe((params) => {
-      this.id = +params["id"];
+    this.route.url.subscribe((segments) => {
+      const lastSegment = segments[segments.length - 1];
+      this.id = +lastSegment.path; // ou .path pour le texte
     });
   }
 
