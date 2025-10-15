@@ -27,7 +27,7 @@ export class CategorieComponent implements OnInit {
         id: category.id,
         label: category.label,
       }));
-      this.filteredCategories = this.categories; // Initialize filtered categories
+      this.filteredCategories = this.categories;
     });
 
     this.route.params.subscribe((params) => {

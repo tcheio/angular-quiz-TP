@@ -1,5 +1,6 @@
 import { Component, Input } from "@angular/core";
 import { CategorieService } from "../shared/services/categorie/categorie.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: "app-carte-categorie",
@@ -9,10 +10,17 @@ import { CategorieService } from "../shared/services/categorie/categorie.service
 })
 export class CarteCategorieComponent {
   @Input() categories: any[] = [];
+  idCategorie: number = 0;
 
-  constructor(private CategorieService: CategorieService) {}
+  constructor(private CategorieService: CategorieService, private router: Router) {}
 
   getCategoryById(id: number) {
     return this.CategorieService.getCategoriesById(id);
   }
+
+  goToCategory(id: number) {
+    this.router.navigate(['/quiz', id]);
+  }
+
+
 }
